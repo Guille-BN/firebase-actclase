@@ -1,4 +1,4 @@
-package com.dbconnection.demo.config;
+package com.example.demo.config;
 import java.io.FileInputStream;
 import java.io.IOException;
 import org.springframework.context.annotation.Bean;

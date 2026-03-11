@@ -1,4 +1,4 @@
-package com.dbconnection.demo.services;
+package com.example.demo.service;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.stereotype.Service;
@@ -7,7 +7,7 @@ import com.google.firebase.cloud.FirestoreClient;
 
 @Service
 public class FirebaseService {
-    public String guardarDato() {
+    public static String guardarDato() {
         try {
             // obtener instancia de Firestore
             Firestore db = FirestoreClient.getFirestore();
@@ -17,8 +17,8 @@ public class FirebaseService {
             data.put("estado", "ok");
             // guardar en colección
             db.collection("test")
-            .document("doc1")
-            .set(data);
+                .document("doc1")
+                .set(data);
             return "Datos guardados correctamente";
         } 
             
